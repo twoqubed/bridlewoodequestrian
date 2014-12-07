@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us">
+<head>
+<title></title>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="/js/jquery-min.js"></script>
+<script type="text/javascript" src="/js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="/js/jquery.thumbs.js"></script>
+
+<style type="text/css" media="screen">
+#container {
+	/*widget_width*/width:800px;
+	/*widget_height*/height:600px;
+	border: 1px solid #c8c8c8;
+}
+
+#container {-khtml-border-radius:4px; -ms-border-radius:4px; -o-border-radius:4px; -moz-border-radius:4px; -webkit-border-radius:4px; border-radius:4px;background-color: white;overflow: hidden;padding: 0;margin: 0;}
+.text-holder {font-family: "Lucida Grande", "Lucida Sans Unicode", "Trebuchet MS", Trebuchet, Arial, sans-serif;font-size: 12px;text-align:center;color: black;height: 20px;line-height: 20px;clear: both;width: 100%;padding: 5px 0;}
+#photonavi {background-color: #e8e8e8;width: 100%;}
+#photolists li.active {background: url('/images/caret_active.png') no-repeat top center;}
+#photolists li.active .thumb-container {cursor: default; border-color: red;}
+.text-holder a,.text-holder a:link,.text-holder a:visited {outline: none;color: #0088CC;text-decoration: none;}
+.text-holder a:hover,.text-holder a:active {text-decoration: underline;}
+#photonavi {font-size: 9px;}
+#photo-viewer {margin: 0;padding: 10px;padding-bottom: 0px;overflow: hidden;position: relative;}
+#photo-display {width: 100%;position: relative;margin: 0;padding: 0;overflow: hidden;}
+#photo-display img{position: absolute;border: none;}
+#photolists li img {border: none;cursor: pointer;}
+.jcarousel-container-horizontal {width: 100%;height: 100%;margin: 0;padding: 0;background:url('/images/gallery-bottom-shadow.png') repeat-x top;}
+.jcarousel-clip-horizontal {top: 0px;left: 50px;height: 100%;}
+.jcarousel-next-horizontal {position: absolute;top: 0px;right: 9px;width: 31px;height: 32px;cursor: pointer;background: url('/images/next-prev-button-sprites.png') -31px 0;}
+.jcarousel-next-disabled-horizontal {cursor: default;background: url('/images/next-prev-button-sprites.png') -31px -32px;}
+.jcarousel-prev-horizontal {position: absolute;top: 0;left: 9px;width: 31px;height: 32px;cursor: pointer;background: url('/images/next-prev-button-sprites.png') 0 0;}
+.jcarousel-prev-disabled-horizontal {cursor: default;background: url('/images/next-prev-button-sprites.png') 0 -32px;}
+.thumb-container,.thumb-inner,.thumb-img {border: none;display: block;width: 100%;height: 100%;margin: 0;padding: 0;overflow: hidden;position: relative;}
+.thumb-container {border: 1px solid transparent;margin:14px 0;padding: 0;}
+.thumb-container a,.thumb-container img {border: none;margin: 0;padding: 0;}
+.thumb-center img,.thumb-strip,.thumb-icon {margin: 0;padding: 0;border: none;position: absolute;}
+.thumb-center img {border: none;margin: 0;padding: 0;}
+#photo-display img,#photonavi img {display: none;}
+</style>
+
+<script type="text/javascript">
+var thumb_dimension = {/*var_thumb_width*/width:125,/*var_thumb_height*/height:125}; // thumbnail size
+/*var_visible_items*/var visible_items=8; // how many thumbnails show in a row
+/*var_autoplay*/var autoplay=true; // play slideshow when launched
+/*var_animation_duration*/var animation_duration=1000; // millisecond
+/*var_pause_time*/var pause_time=3000; // time gap between animation
+/*var_caption*/var caption=false; // display caption or not
+
+/* don't change this script line */
+var viewer,textholder;var total_items=0;var timer=null;function mycarousel_itemLoadCallback(b,a){if(a!="init"){return}if(caption){textholder.html($("#photo-"+1).css({"z-index":total_items}).fadeIn(function(){$("#photolists li:eq(0)").addClass("active");$("#photonavi img.thumb").css({cursor:"pointer"}).bind("click",thumbclick);$(".active img.thumb").css({cursor:"default"})}).attr("alt"))}else{$("#photo-"+1).css({"z-index":total_items}).fadeIn(function(){$("#photolists li:eq(0)").addClass("active");$("#photonavi img.thumb").css({cursor:"pointer"}).bind("click",thumbclick);$(".active img.thumb").css({cursor:"default"})})}if(autoplay&&total_items>1){timer=setTimeout(changecontent,pause_time)}$(".jcarousel-prev-horizontal").click(function(){stoptransition()});$(".jcarousel-next-horizontal").click(function(){stoptransition()})}function thumbclick(b){stoptransition();if($(this).parents("li").hasClass("active")){return false}$("#photonavi img.thumb").css({cursor:"default"}).unbind("click");$(".active").removeClass("active");$("img",viewer).css({"z-index":0}).fadeOut();target_num=$(this).attr("id").split("-");var a=target_num[1];if(caption){textholder.html($("#photo-"+a).css({"z-index":total_items}).fadeIn(function(){$("#photolists li:eq("+(a-1)+")").addClass("active");$("#photonavi img.thumb").css({cursor:"pointer"}).bind("click",thumbclick);$(".active img.thumb").css({cursor:"default"})}).attr("alt"))}else{$("#photo-"+a).css({"z-index":total_items}).fadeIn(function(){$("#photolists li:eq("+(a-1)+")").addClass("active");$("#photonavi img.thumb").css({cursor:"pointer"}).bind("click",thumbclick);$(".active img.thumb").css({cursor:"default"})})}return false}function changecontent(){target_num=$(".active img.thumb").attr("id").split("-");var a=target_num[1];a++;a=a>total_items?1:a;$("#photolists").jcarousel("scroll",a);$("#photonavi img.thumb").css({cursor:"default"}).unbind("click");$(".active").removeClass("active");$("img",viewer).css({"z-index":0}).fadeOut();if(caption){textholder.html($("#photo-"+a).css({"z-index":total_items}).fadeIn(function(){$("#photolists li:eq("+(a-1)+")").addClass("active");$("#photolists img.thumb").css({cursor:"pointer"}).bind("click",thumbclick);$(".active img.thumb").css({cursor:"default"});if(autoplay){timer=setTimeout(changecontent,pause_time)}}).attr("alt"))}else{$("#photo-"+a).css({"z-index":total_items}).fadeIn(function(){$("#photolists li:eq("+(a-1)+")").addClass("active");$("#photolists img.thumb").css({cursor:"pointer"}).bind("click",thumbclick);$(".active img.thumb").css({cursor:"default"});if(autoplay){timer=setTimeout(changecontent,pause_time)}})}}function stoptransition(){if(!autoplay){return}if(timer){clearTimeout(timer);$(":animated","#photo-display").stop(true,true)}autoplay=false;timer=null}$(document).ready(function(){total_items=$("#photolists li").size();viewer=$("#photo-display");if(caption){viewer.after('<div class="text-holder"></div>');textholder=$(".text-holder")}else{$("#photo-viewer").css("padding-bottom",parseInt($("#photo-viewer").css("padding-top"),10)+"px")}var m=thumb_dimension.width+4;var b=thumb_dimension.height+2;var c=$("#container").width()-(50*2);var i=b+28;var f=$("#container").height()-i-(caption?parseInt($("#photo-viewer").css("padding-top"),10):parseInt($("#photo-viewer").css("padding-top"),10)*2);$("#photonavi").css("height",i+"px");$("#photo-viewer").css("height",f+"px");var k=$("#photo-viewer").width();var g=f-(caption?textholder.height()+(parseInt(textholder.css("padding-top"),10)*2):0);var j=Math.max(k,g);var e=Math.max(thumb_dimension.width,thumb_dimension.height);$("#photo-display").css({height:g+"px"});if(m*visible_items>c){visible_items=Math.floor(c/m)}var a=c-(m*visible_items);$("#photolists li").css({"margin-left":Math.ceil((a/visible_items)/2)+"px","margin-right":Math.floor((a/visible_items)/2)+"px"});var h=document.createElement("style");var d=".jcarousel-clip-horizontal {width: "+c+"px;} ";d+="#photolists li,.jcarousel-item-horizontal,.jcarousel-item-placeholder-horizontal {width: "+m+"px;height: "+i+"px;} ";d+=".jcarousel-next-horizontal {top: "+Math.round((i-32)/2)+"px;} .jcarousel-prev-horizontal {top: "+Math.round((i-32)/2)+"px;} ";d+=".thumb-container {width: "+thumb_dimension.width+"px; height: "+thumb_dimension.height+"px;}";h.setAttribute("type","text/css");if(h.styleSheet){h.styleSheet.cssText=d}else{var l=document.createTextNode(d);h.appendChild(l)}document.getElementsByTagName("head")[0].appendChild(h);$("#photolists li img").each(function(p){var q=e_width=$(this).width();var n=e_height=$(this).height();var o="thumb-"+(p+1).toString();$(this).attr("id",o);if(q>k){e_width=k;e_height=Math.round((n*e_width)/q);if(e_height>g){e_height=g;e_width=Math.round((q*e_height)/n)}}else{if(n>g){e_height=g;e_width=Math.round((q*e_height)/n);if(e_width>k){e_width=k;e_height=Math.round((n*e_width)/q)}}}viewer.append('<img id="photo-'+(p+1).toString()+'" src="'+$(this).attr("src")+'" alt="'+$(this).attr("alt")+'" style="z-index: 0; width:'+e_width+"px; height:"+e_height+"px;top:"+Math.floor((g-e_height)/2)+"px; left:"+Math.floor((k-e_width)/2)+'px;" />');if(q>=n){$(this).attr({width:Math.round((q*e)/n),height:e})}else{$(this).attr({width:e,height:Math.round((n*e)/q)})}$(this).addClass("thumb").thumbs().css("cursor","pointer").show()});$("#photolists").jcarousel({visible:visible_items,size:total_items,animation:animation_duration,scroll:visible_items,itemLoadCallback:mycarousel_itemLoadCallback})});
+</script>
+</head>
+<body style="background-color: transparent; margin: 0pt;">
+<div id="container"><div id="photo-viewer"><div id="photo-display"></div></div><div id="photonavi"><ul id="photolists" style="list-style:none; margin: 0;padding: 0;">
+<!--begin to insert contents-->
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0005.jpg" width="850" height="1280" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0017.jpg" width="850" height="1280" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0019.jpg" width="4288" height="2848" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/Image.jpg" width="956" height="1280" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0022.jpg" width="1280" height="850" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/Image 1.jpg" width="956" height="1280" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0023.jpg" width="1280" height="942" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0028.jpg" width="1280" height="850" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0029.jpg" width="1250" height="1280" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0031.jpg" width="1280" height="850" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0033.jpg" width="1280" height="850" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0034.jpg" width="1280" height="850" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0037.jpg" width="1280" height="850" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0041.jpg" width="1280" height="850" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0049.jpg" width="1280" height="900" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0058.jpg" width="1280" height="850" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0067.jpg" width="3365" height="2848" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0070.jpg" width="1280" height="850" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0072.jpg" width="1280" height="850" alt="" /></li>
+<li><img class="center-focus" src="http://www.bridlewoodequestrian.com/Holiday Party/DSC_0074.jpg" width="3948" height="2633" alt="" /></li>
+<li><img class=
+<!--end to insert contents-->
+</ul></div></div>
+</body>
+</html>
