@@ -1,0 +1,29 @@
+body {
+    margin: 0 auto;
+    width: 800px;
+}
+
+table {
+    width: 640px;
+    margin-top: 15px;
+    font-size: medium;
+}
+
+table, th, td {
+    border: 1px solid black
+}
+
+th, td {
+    padding: 3px;
+}
+
+tr.division-header > th {
+    text-align: center;
+    background: green;
+    color: white;
+    font-size: larger;
+}
+
+tr.class-header > th {
+    text-align: left;
+}
