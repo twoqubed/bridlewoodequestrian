@@ -8,16 +8,16 @@
     font-weight: 700;
     letter-spacing: 0;
     line-height: 24px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
     text-align: left;
     text-decoration: underline;
-    text-indent: 0px;
+    text-indent: 0;
     text-transform: none;
 }
 .paragraph_style_1 {
@@ -30,16 +30,16 @@
     font-weight: 400;
     letter-spacing: 0;
     line-height: 22px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
     text-align: left;
     text-decoration: none;
-    text-indent: 0px;
+    text-indent: 0;
     text-transform: none;
 }
 .paragraph_style_2 {
@@ -52,60 +52,16 @@
     font-weight: 700;
     letter-spacing: 0;
     line-height: 22px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
     text-align: left;
     text-decoration: underline;
-    text-indent: 0px;
-    text-transform: none;
-}
-.paragraph_style_3 {
-    color: rgb(0, 0, 0);
-    font-family: 'Verdana-Bold', 'Verdana', sans-serif;
-    font-size: 13px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: 32px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    text-align: left;
-    text-decoration: underline;
-    text-indent: 0px;
-    text-transform: none;
-}
-.paragraph_style_4 {
-    color: rgb(0, 0, 0);
-    font-family: 'Verdana-BoldItalic', 'Verdana', sans-serif;
-    font-size: 12px;
-    font-stretch: normal;
-    font-style: italic;
-    font-variant: normal;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: 21px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    opacity: 1.00;
-    padding-bottom: 2px;
-    padding-top: 0px;
-    text-align: left;
-    text-decoration: none;
-    text-indent: 0px;
+    text-indent: 0;
     text-transform: none;
 }
 .paragraph_style_5 {
@@ -118,60 +74,16 @@
     font-weight: 700;
     letter-spacing: 0;
     line-height: 21px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
     text-align: left;
     text-decoration: none;
-    text-indent: 0px;
-    text-transform: none;
-}
-.paragraph_style_6 {
-    color: rgb(0, 0, 0);
-    font-family: 'Verdana-BoldItalic', 'Verdana', sans-serif;
-    font-size: 12px;
-    font-stretch: normal;
-    font-style: italic;
-    font-variant: normal;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: 21px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    text-align: left;
-    text-decoration: none;
-    text-indent: 0px;
-    text-transform: none;
-}
-.paragraph_style_7 {
-    color: rgb(0, 0, 0);
-    font-family: 'Verdana', sans-serif;
-    font-size: 13px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 27px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    text-align: left;
-    text-decoration: none;
-    text-indent: 0px;
+    text-indent: 0;
     text-transform: none;
 }
 .style {
@@ -192,38 +104,16 @@
     font-weight: 700;
     letter-spacing: 0;
     line-height: 27px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
     text-align: left;
     text-decoration: underline;
-    text-indent: 0px;
-    text-transform: none;
-}
-.paragraph_style_9 {
-    color: rgb(0, 0, 0);
-    font-family: 'Verdana-Bold', 'Verdana', sans-serif;
-    font-size: 13px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: 26px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 2px;
-    text-align: left;
-    text-decoration: none;
-    text-indent: 0px;
+    text-indent: 0;
     text-transform: none;
 }
 .style_1 {
@@ -240,16 +130,16 @@
     font-weight: 700;
     letter-spacing: 0;
     line-height: 26px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
     text-align: left;
     text-decoration: none;
-    text-indent: 0px;
+    text-indent: 0;
     text-transform: none;
 }
 .paragraph_style_11 {
@@ -262,38 +152,16 @@
     font-weight: 700;
     letter-spacing: 0;
     line-height: 26px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
     text-align: left;
     text-decoration: none;
-    text-indent: 0px;
-    text-transform: none;
-}
-.paragraph_style_12 {
-    color: rgb(0, 0, 0);
-    font-family: 'Verdana-Bold', 'Verdana', sans-serif;
-    font-size: 13px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: 27px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
-    text-align: left;
-    text-decoration: underline;
-    text-indent: 0px;
+    text-indent: 0;
     text-transform: none;
 }
 .style_SkipStroke_2 {
@@ -334,16 +202,16 @@
     font-weight: 400;
     letter-spacing: 0;
     line-height: 20px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
     opacity: 1.00;
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding-bottom: 0;
+    padding-top: 0;
     text-align: left;
     text-decoration: none;
-    text-indent: 0px;
+    text-indent: 0;
     text-transform: none;
 }
 .graphic_image_style_default_SkipStroke {
