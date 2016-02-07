@@ -7,7 +7,7 @@
 	zoom: 1; 
 	position: relative; 
 	max-width:800px;
-	margin:69px auto 0px;
+	margin:69px auto 0;
 	z-index:90;
 	border:none;
 	text-align:left; /* reset align=center */
@@ -63,7 +63,7 @@
 }
 
 #wowslider-container1  .ws_bullets { 
-	font-size: 0px; 
+	font-size: 0;
 	float: left;
 	position:absolute;
 	z-index:70;
@@ -120,15 +120,15 @@
 
 /* bottom center */
 #wowslider-container1  .ws_bullets {
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
 }
 
 #wowslider-container1 .ws-title{
 	position:absolute;
 	display:block;
 	bottom: 10%;
-	left: 0px;
+	left: 0;
 	margin-right:5px;
 	color:#4589ce;
 	z-index: 50;
@@ -149,7 +149,7 @@
 	color: #555555;
     font-size: 20px;	
 }#wowslider-container1  .ws_thumbs { 
-	font-size: 0px; 
+	font-size: 0;
 	position:absolute;
 	overflow:auto;
 	z-index:70;

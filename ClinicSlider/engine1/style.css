@@ -63,7 +63,7 @@
 }
 
 #wowslider-container1  .ws_bullets { 
-	font-size: 0px; 
+	font-size: 0;
 	float: left;
 	position:absolute;
 	z-index:70;
@@ -149,7 +149,7 @@
 	text-transform:none;
 }
 #wowslider-container1  .ws_thumbs { 
-	font-size: 0px; 
+	font-size: 0;
 	position:absolute;
 	overflow:auto;
 	z-index:70;
