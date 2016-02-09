@@ -1,0 +1,17 @@
+.footer {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: verdana, sans-serif;
+    text-align: center;
+    color: rgb(226, 217, 190);
+}
+
+.contact-info {
+    font-size: 9pt;
+    padding-right: 10px;
+}
+
+.copyright-info {
+    font-family: verdana, sans-serif;
+    font-size: 7pt;
+}
