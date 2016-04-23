@@ -91,6 +91,9 @@ footer {
         height: 70%;
     }
 }
+.navbar {
+    border: 0;
+}
 
 .navbar-inverse {
     background-color: #00572d;
