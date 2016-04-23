@@ -93,7 +93,7 @@ footer {
 }
 
 .navbar-inverse {
-    background-color: #004520;
+    background-color: #00572d;
 }
 
 .navbar-inverse .navbar-brand {
@@ -111,11 +111,11 @@ footer {
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus {
-    color: #CBC3AB;
-    background-color: #1A5836;
+    color: #e2d9be;
+    background-color: #006635;
 }
 
 .navbar-inverse .navbar-nav > .open > a:focus {
-    color: #CBC3AB;
-    background-color: #1A5836;
+    color: #e2d9be;
+    background-color: #006635;
 }
