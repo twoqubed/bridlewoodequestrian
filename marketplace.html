@@ -106,15 +106,21 @@
             <div class="col-md-6">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/xz_iXar0F1c" frameborder="0" allowfullscreen></iframe>
             </div>
+            <div class="col-md-12">
+                <a href="marketplace/harley1-thumbnail.jpg" data-toggle="lightbox">
+                    <img src="marketplace/harley1.jpg" class="img-fluid">
+                </a>
+            </div>
         </div>
 
         <div class="row">
             <div class="col-md-6">
                 <h2>Charlie Bucket</h2>
                 <p>
-                    11 year old 15.1 paint gelding. Currently coursing 2'3". Very honest to his fences. He doesn't love
-                    lesson horse life and would prefer to have one person. Suitable project for a teenager working with
-                    a trainer.
+                    Charlie has been a part of our lesson program for the last several years and is looking for a kid
+                    of his own. He would excel with a spunky kid looking for something to bring along with a trainer.
+                    Charlie is very game and fun to ride and loves to jump around- very honest to his fences! He is very
+                    low maintenance and easy to have in the barn. Priced in the low-mid four figures.
                 </p>
             </div>
             <div class="col-md-6">
@@ -141,6 +147,13 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
 
 </body>
 
